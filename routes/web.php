@@ -24,7 +24,7 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-Route::get('/upload-file', [FileController::class, 'index'])->name('upload-file');
-Route::post('/save-file', [FileController::class, 'saveFile'])->name('save-file');
+Route::get('/upload-file', [FileController::class, 'index'])->name('upload-file')->middleware(['auth']);
+Route::post('/save-file', [FileController::class, 'saveFile'])->name('save-file')->middleware(['auth']);
 
 require __DIR__.'/auth.php';
