@@ -46,6 +46,9 @@ php artisan migrate
 # start vite
 npm run dev
 
+# Start queue worker
+php artisan queue:work
+
 # start the php server
 php artisan serve
 ```
